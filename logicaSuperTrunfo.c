@@ -24,17 +24,19 @@ int main() {
     // Entrada de dados - carta 1
     printf ("=== Cadastro da Carta 1 ===\n");
 
-    printf("Estado (A-H): ");
+    printf("Estado (A-H):");
     scanf("%c", &carta1.estado);
 
-    printf("Código da Carta (ex: A01): ");
-    scanf("%s", &carta1.codigo);
+    printf("Código da Carta (ex: A01):");
+    scanf("%s", carta1.codigo);
 
-    printf("Nome da Cidade: ");
-    scanf("%[^\n]", &carta1.nomeCidade);
+    
+    printf("Nome da Cidade:");
+    scanf("%[^\n]", carta1.nomeCidade);
 
     printf ("População:");
     scanf("%d", &carta1.populacao);
+
 
     printf("Área (em km²): ");
     scanf ("%f", &carta1.area);
@@ -49,14 +51,17 @@ int main() {
 
     printf("\n=== Cadastro da Carta 2===\n");
 
+
     printf("Estado (A-H): ");
     scanf ("%c", &carta2.estado);
 
+
     printf("Código da Carta (ex: B03):");
-    scanf ("%s", &carta2.codigo);
+    scanf ("%s", carta2.codigo);
+
 
     printf("Nome da Cidade:");
-    scanf("%[^\n]", &carta2.nomeCidade);
+    scanf("%[^\n]", carta2.nomeCidade);
 
     printf("População:");
     scanf("%d", &carta2.populacao);
@@ -94,6 +99,17 @@ int main() {
     printf("PIB per capita: %.2f hab/km²\n", carta2. pibPerCapita);
 
     //Comparação (usando o PIB per capita)
+    printf("\n===== Comparação baseada no PIB per capita =====\n");
+
+    if (carta1.pibPerCapita>carta2.pibPerCapita){
+        printf("Carta vencedora : %s (%s)\n", carta1.codigo, carta1.nomeCidade);
+        printf("PIB per capita: %.2f vs %.2f\n", carta1.pibPerCapita, carta2.pibPerCapita);
+    } else if (carta2.pibPerCapita>carta1.pibPerCapita){
+        printf("Carta vencedora: %s (%s)\n", carta2.codigo, carta2.nomeCidade);
+        printf("PIB per capita: %.2f vs %.2f\n", carta2.pibPerCapita, carta1.pibPerCapita);
+    }else{
+        printf("Empate!\n Ambas as cartas possuem PIB per capita igual:%.2f\n", carta1.pibPerCapita);
+    }
 
     return 0;
 }
