@@ -24,19 +24,17 @@ int main() {
     // Entrada de dados - carta 1
     printf ("=== Cadastro da Carta 1 ===\n");
 
-    printf("Estado (A-H):");
-    scanf("%c", &carta1.estado);
-
-    printf("Código da Carta (ex: A01):");
-    scanf("%s", carta1.codigo);
-
+    printf("Estado (A-H): ");
+    scanf(" %c", &carta1.estado);
     
-    printf("Nome da Cidade:");
-    scanf("%[^\n]", carta1.nomeCidade);
+    printf("Código da Carta (ex: A01): ");
+    scanf("%s\n", carta1.codigo);
 
-    printf ("População:");
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", carta1.nomeCidade);
+
+    printf("População: ");
     scanf("%d", &carta1.populacao);
-
 
     printf("Área (em km²): ");
     scanf ("%f", &carta1.area);
@@ -54,13 +52,12 @@ int main() {
 
     printf("Estado (A-H): ");
     scanf ("%c", &carta2.estado);
-
-
-    printf("Código da Carta (ex: B03):");
+    
+    printf("Código da Carta (ex: B03): ");
     scanf ("%s", carta2.codigo);
 
 
-    printf("Nome da Cidade:");
+    printf("Nome da Cidade: ");
     scanf("%[^\n]", carta2.nomeCidade);
 
     printf("População:");
@@ -83,7 +80,7 @@ int main() {
     printf("\n==== Carta 1 ====\n");
     printf("Código: %s\n", carta1.codigo);
     printf("Cidade: %s\n", carta1.nomeCidade);
-    printf("Populção: %d\n", carta1.populacao);
+    printf("População: %d\n", carta1.populacao);
     printf("Área: %.2f\n", carta1.area);
     printf("PIB: %.2f\n", carta1.pib);
     printf("Densidade populacional: %.2f hab/km² \n" , carta1.densidadePopulacional);
@@ -92,7 +89,7 @@ int main() {
     printf("\n==== Carta 2 ====\n");
     printf("Código: %s\n", carta2.codigo);
     printf(" Cidade: %s\n", carta2.nomeCidade);
-    printf("Populçao: %s\n", carta2.populacao);
+    printf("Populaçao: %d\n", carta2.populacao);
     printf("Área: %.2f\n", carta2.area);
     printf("PIB: %.2f\n", carta2.pib);
     printf("Densidade Populacional: %.2f\n", carta2.densidadePopulacional);
